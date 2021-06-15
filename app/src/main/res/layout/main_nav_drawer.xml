@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorOnPrimary"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="16dp"
+        android:onClick="ClickLogo"
+        android:src="@drawable/logo"
+        android:contentDescription="TODO" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway_light"
+        android:text="Alimente-se bem"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="?attr/colorOnSecondary"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="?attr/colorOnSecondary" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:onClick="ClickHome"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/ic_home"
+                    android:contentDescription="TODO" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/raleway_light"
+                    android:padding="10dp"
+                    android:text="Home"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:onClick="ClickAlimentos"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/ic_alimentos"
+                    android:contentDescription="TODO" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/raleway_light"
+                    android:padding="10dp"
+                    android:text="Alimentos"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:onClick="ClickPiramide"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/ic_piramide"
+                    android:contentDescription="TODO" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/raleway_light"
+                    android:padding="10dp"
+                    android:text="Piramide Alimentar"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:onClick="ClickPorcoes"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/ic_porcoes"
+                    android:contentDescription="TODO" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/raleway_light"
+                    android:padding="10dp"
+                    android:text="Porções"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:onClick="ClickCalculadora"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/ic_calc_imc"
+                    android:contentDescription="TODO" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/raleway_light"
+                    android:padding="10dp"
+                    android:text="Calculadora IMC"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:onClick="ClickGadgets"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/ic_gadgets"
+                    android:contentDescription="TODO" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/raleway_light"
+                    android:padding="10dp"
+                    android:text="Gadgets"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:onClick="ClickConfig"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/ic_configs"
+                    android:contentDescription="TODO" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/raleway_light"
+                    android:padding="10dp"
+                    android:text="Configurações"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:onClick="ClickSobreApp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/ic_info"
+                    android:contentDescription="TODO" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/raleway_light"
+                    android:padding="10dp"
+                    android:text="Sobre o App"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:onClick="ClickLogout"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/ic_logout"
+                    android:contentDescription="TODO" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/raleway_light"
+                    android:padding="10dp"
+                    android:text="Logout"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

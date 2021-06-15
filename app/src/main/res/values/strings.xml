@@ -1,0 +1,232 @@
+<resources>
+    <string name="app_name">Saúde top</string>
+    <!-- Preference Titles -->
+
+    <!-- Messages Preferences -->
+
+    <!-- Sync Preferences -->
+
+
+    <string name="texto_alface">
+    <br><b>1. É aliado de quem quer emagrecer</b></br><br />
+<br>É claro que nenhum alimento sozinho emagrece. Mas o consumo de alface proporciona sensação de saciedade devido as fibras e a água presente no alimento, o que o torna favorável para quem buscar comer menos. Além disso, a alface é um alimento de baixa caloria, mas é importante ficar atento ao tempero utilizado nas saladas, uma vez que os molhos cremosos e gordurosos podem aumentar o consumo de calorias e atrapalhar o processo de emagrecimento (Veja mais ingredientes que atrapalham a salada).</br>
+<br /><br><b>2. Ajuda no sistema imunológico</b></br><br />
+<br>A alface possui vitaminas A, C, K, fibras, antioxidantes, magnésio e potássio que são essenciais para o bom funcionamento do sistema imunológico. Seu consumo regular ajuda a manter o corpo mais fortalecido e combate o risco de resfriados, gripes e outras inflamações comuns, melhorando os mecanismos de defesa do organismo.</br>
+<br /><br><b>3. Faz bem para os olhos</b></br><br />
+<br>Por ter vitamina A, luteína e zeaxantina, o consumo de alface pode trazer benefícios para a saúde ocular. As substâncias são carotenoides que atuam na redução de doenças oftalmológicas como a catarata e a degeneração macular, ambos problemas de saúde que são relacionados à idade e que podem levar à cegueira. Sendo assim, o consumo frequente da alface contribui para a saúde dos olhos.</br>
+<br /><br><b>4. Melhora o funcionamento do intestino</b></br><br />
+<br>As fibras alimentares presentes nas folhas de alface são responsáveis por prevenir a constipação intestinal. Elas ajudam a melhorar o trânsito intestinal. Umas das fibras presentes na alface é a pectina, que é solúvel e forma um gel em contato com a água e permite que o intestino funcione melhor.</br>
+<br /><br><b>5. Tem efeito calmante</b></br><br />
+<br>Consumir a hortaliça ajuda a acalmar e pode diminuir a ansiedade. Isso acontece porque a alface tem uma substância conhecida como lactucina que relaxa o organismo e pode ajudar até mesmo a combater a insônia. Por isso, o alimento é considerado um calmante natural. Possui também ácido fólico que ajuda na síntese dos neurotransmissores como a serotonina, que proporciona bem-estar.</br>
+<br /><br><b>6. Ajuda na hidratação</b></br><br />
+<br>Manter o corpo hidratado é importante para a saúde. Além de beber água e consumir alimentos ricos nela contribui para manter a hidratação em dia. A alface é composta por cerca de 96% de água e seu consumo ajuda a diminuir a sede e deixa o organismo hidratado por mais tempo.</br>
+<br /><br><b>7. Diminui a pressão arterial</b></br><br />
+<br>Ter uma dieta rica em potássio ajuda a baixar a pressão arterial e o nutriente é encontrado na alface. O potássio ajuda a diminuir os efeitos do sódio e a dilatar os vasos sanguíneos. Além disso, o alimento possui nitrato que durante a digestão é convertido em óxido nítrico. Esse composto relaxa e alarga os vasos sanguíneos, reduzindo a </br>
+    </string>
+    <string name="desc_piramide">
+            O mundo está mudando a sociedade começa a
+            rever alguns hábitos nocivos. Um exemplo é a busca
+            cadavez maior por uma alimentação mais saudável.
+            Mas quando pensamos comer melhor, logo nos vem à
+            cabeça uma dúvida: por onde começar?</string>
+
+    <string name="desc_piramide2"> Se é o seu caso, conhecer a pirâmide alimentar
+            é uma ótima forma de se orientar. Ela divide os
+            alimentos em 8 grupos e indica os que possuem os
+            nutrientes essenciais para nos dar energia e
+            prevenir doenças. Quer conhecer esses grupos e
+            mudar a sua forma de se alimentar?</string>
+
+
+    <string name="grupo1">
+        É o maior grupo alimentar e compõe a base da pirâmide alimentar.
+        É nesse grupo que estão as fontes de carboidratos como aveia, pão, arroz,
+        farinhas integrais, batata doce entre outros. Os alimentos desse grupo têm
+        importantes fontes de energia como carboidratos complexos,
+        vitaminas do complexo B e fibras.
+    </string>
+
+    <string name="grupo2">
+        É o grupo das verduras e legumes, fontes de vitaminas, minerais e fibras.
+        São essenciais para a regulação de diversas funções metabólicas
+        e para funcionamento adequado do organismo.
+    </string>
+
+
+    <string name="grupo3">
+        Assim como as hortaliças, as frutas são fontes de fibras, vitaminas e
+        minerais essenciais ao funcionamento do organismo. Elas oferecem os
+        antioxidantes (vitaminas A, C e E) que são nutrientes importantes para
+        a proteção das células, pois combatem a ação dos radicais livres.
+    </string>
+
+
+    <string name="grupo4">
+2 xícaras de chá (200 ml) de Leite Desnatado ou 1 xícara de chá de Leite Integral
+2 potinhos de Leite Fermentado
+1 pote de 100g de Iogurte
+2 fatias finas de Queijo Mussarela
+4 colheres de sopa de Queijo Cottage
+1 colher de sopa de Requeijão
+    </string>
+
+
+    <string name="grupo5">
+        Este é o principal grupo das fontes de proteínas de origem animal, essencial
+        para a formação de tecidos, enzimas e anticorpos. É nele que estão
+        também os alimentos ricos em ferro e vitaminas B6 e B12, que ajudam
+        a prevenir as anemias. No entanto, seu consumo deve ser de no máximo
+    duas vezes ao dia, pois estes alimentos são ricos em gorduras saturadas e colesterol.
+    </string>
+
+
+    <string name="grupo6">
+        Neste grupo estão os grãos como: feijões, lentilha, grão de bico, soja e oleaginosas.
+        Ricos em fibras, contribuem para o bom funcionamento do intestino.
+        Para os vegetarianos, esses alimentos são ainda mais indispensáveis,
+        já que são excelente fonte de proteína.
+    </string>
+
+    <string name="grupo7">
+        Fonte de energia, os óleos e gorduras são responsáveis pelo transporte
+        de vitaminas do complexo B no organismo. Por serem ricos em calorias,
+        sua ingestão deve ser moderada e equilibrada. Escolha os alimentos ricos
+        em gorduras boas como óleo vegetal, azeite de oliva extravirgem, linhaça,
+        castanhas e amêndoas.</string>
+
+
+    <string name="grupo8">
+        Este grupo é o “patinho feio” da pirâmide. Composto por açúcar,
+        mel, doces e produtos açucarados como achocolatados. São pobres
+        em nutrientes, não têm fibras, e seu consumo deve ser esporádico.
+    </string>
+
+    <string name="desc_porcoes">
+        A pirâmide alimentar possui quatro níveis com oito grupos de alimentos ao todo,
+        divididos de acordo com a sua participação no total calórico de uma dieta saudável.
+    </string>
+    <string name="desc_porcoes2">
+        Na base da pirâmide estão dispostos alimentos que devem tem uma participação maior
+        no total de calorias da sua alimentação, portanto devem ser consumidos em maior
+        quantidade, ao contrário dos alimentos dispostos no topo, que devem contribuir
+        com a menor parte das calorias totais da sua alimentação. Ou seja, a medida que
+        a pirâmide afina, menor deve ser o consumo das porções.
+    </string>
+    <string name="desc_porcoes3">
+        Cada grupo de alimentos é fonte de
+        nutrientes específicos e essenciais a uma boa manutenção do organismo.
+        Abaixo você vai encontrar quais são os principais alimentos de cada grupo e as
+        quantidades equivalentes das porções recomendadas.
+    </string>
+    <string name="porcao_grupo1">
+        5 colheres de sopa de arroz comum ou integral.
+        1 unidade de Pão de Sal.
+        2 fatias de Pão de Forma comum ou integral.
+        5 biscoitos cream cracker / água e sal.
+        2 colheres de sopa de farinha.
+        1 pedaço médio de bolo comum.
+        1 pregador de macarrão sem molho.
+        4 colheres de sopa de batata inglesa cozida.
+    </string>
+    <string name="porcao_grupo2">
+        2 pratos de sobremesa de folhosos: Alface, Rúcula, Couve, Mostarda, Repolho, Acelga, Almeirão.
+        4 colheres de sopa cenoura crua.
+        6 colheres de sopa de chuchu cozido.
+        4 colheres de sopa de beterraba.
+        10 fatias de tomate.
+        4 colheres de sopa de couve refogada.
+        3 colheres de sopa de Abobora Moranga.
+    </string>
+    <string name="porcao_grupo3">
+        1 Maçã vermelha média.
+        ½ Mamão Papaia.
+        1 Banana média.
+        1 Pêra.
+        1 Laranja.
+        4 limões.
+        2 fatias médias de Abacaxi.
+        4 unidades de Damasco seco ou Ameixa seca.
+        1 unidade pequena de Caqui.
+    </string>
+    <string name="porcao_grupo4">
+        2 xícaras de chá (200 ml) de Leite Desnatado ou 1 xícara de chá de Leite Integral.
+        2 potinhos de Leite Fermentado.
+        1 pote de 100g de Iogurte.
+        2 fatias finas de Queijo Mussarela.
+        4 colheres de sopa de Queijo Cottage.
+        1 colher de sopa de Requeijão.
+    </string>
+    <string name="porcao_grupo5">
+        2 unidades de Almôndegas.
+        1 unidade pequena de Bife de Boi.
+        2 unidades de Ovo.
+        2 fatias finas de Presunto de Porco.
+        1 unidade média de filé de Peixe.
+        1 unidade de Hambúrguer.
+        3 colheres de sopa de Carne Moída.
+    </string>
+    <string name="porcao_grupo6">
+        1 concha média de Feijão Marrom ou Preto.
+        2 colheres de sopa de Lentilha.
+        2 colheres de sopa de Ervilha.
+        3 colheres de sopa de Soja.
+    </string>
+    <string name="porcao_grupo7">
+        1 colher de sopa de Azeite de Oliva
+        2 colheres de sopa de Óleo Vegetal
+        2 colheres de chá rasas de Manteiga
+        2 colheres de chá rasas de Maionese Comum
+        2 colheres de chá rasas de Margarina
+    </string>
+    <string name="porcao_grupo8">
+        2 colheres de sopa de Mel
+        2 colheres de sopa de Açúcar comum
+        1 colher de sopa de Achocolatado comum
+        1 unidade de bombom
+    </string>
+    <string name="texto_introducao">
+        NOME DO APP foi desenvolvido com intuito de informar sobre os
+alimentos que ingerimos diariamente. Todo conteúdo disponível
+no aplicativo foi coletado por meio de pesquisas efetuadas via internet,
+        rótulos de alimentos, pesquisas cientificas e órgãos governamentais.
+
+    </string>
+    <string name="texto_introducao2">
+        Todo conteúdo disponível no aplicativo são meramente informativos,
+        para que o usuário possa ter conhecimento mais a fundo em relação
+ao consumo de alimentos, todos os alimentos disponíveis no aplicativo,
+        foram selecionados seguindo a pirâmide alimentar Brasileira.
+    </string>
+    <string name="texto_introducao3">
+        Para ter acesso ao conteúdo o usuário deverá efetuar um pequeno cadastro com
+informações básicas como nome, e-mail, senha, idade, peso e altura. Efetuando
+o cadastro o usuário poderá usufruir de todo conteúdo disponível no aplicativo.
+Caso necessite efetuar alterações em seus dados basta seguir os passos informados
+no aplicativo.
+
+    </string>
+    <string name="texto_introducao4">
+        Seus dados não serão repassados a terceiros conforme a
+Lei Geral de Proteção de Dados Pessoais, Lei nº 13.709/2018, mas
+        reservamos o direito de utiliza-los para fins de aprimoramentos
+futuros no aplicativo e/ou desenvolvimento de aplicações com base nos
+        dados fornecidos pelos usuários.
+    </string>
+    <string name="miBand">
+    Monitoramento cardíaco, atividades físicas, sono, pressão, nível de estresse e ciclo menstrual.
+    </string>
+    <string name="smartWatch">
+
+       Monitora seus batimentos cardíacos e número de passos diários,
+        e pode ser utilizado para auxiliar no monitoramento do seu
+        desempenho em diversas atividades físicas.
+
+    </string>
+    <string name="oximetro">
+    Monitora a porcentagem de oxigênio no sangue e os batimentos cardíacos.
+    </string>
+    <string name="aferidor">
+        O Aferidor digital é extremamente interessante para quem precisa fazer a avaliação dos níveis
+        de pressão em casa, mas deve estar devidamente calibrado para não fornecer resultados incorretos.
+    </string>
+</resources>

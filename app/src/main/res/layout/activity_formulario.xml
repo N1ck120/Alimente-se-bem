@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/colorOnPrimary"
+    tools:context=".Formulario">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="187dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:paddingStart="40dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/logo"
+                    android:contentDescription="TODO" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/raleway_light"
+                    android:text="Para efetuar seu cadastro,"
+                    android:textAlignment="center"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/raleway_light"
+                    android:text="preencha os campos abaixo"
+                    android:textAlignment="center"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="70dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:text="Nome"
+                    android:textColor="?attr/colorPrimary"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="18dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    app:srcCompat="@drawable/ic_name"
+                    android:contentDescription="TODO" />
+
+                <EditText
+                    android:layout_width="260dp"
+                    android:layout_height="32dp"
+                    android:background="#00ff0000"
+                    android:ems="10"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="5dp"
+                    android:selectAllOnFocus="true"
+                    tools:ignore="LabelFor"
+                    android:autofillHints="" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:background="?attr/colorPrimary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingStart="70dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:text="Idade"
+                    android:textColor="?attr/colorPrimary"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="70dp"
+                    android:padding="3dp"
+                    android:text="Peso"
+                    android:textColor="?attr/colorPrimary"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="70dp"
+                    android:padding="3dp"
+                    android:text="Altura"
+                    android:textColor="?attr/colorPrimary"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="18dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    app:srcCompat="@drawable/ic_calendario"
+                    android:contentDescription="TODO" />
+
+                <EditText
+                    android:id="@+id/idade"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:background="#00ff0000"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:paddingStart="5dp"
+                    android:selectAllOnFocus="true"
+                    tools:ignore="LabelFor"
+                    android:autofillHints="" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="24dp"
+                    app:srcCompat="@drawable/ic_peso"
+                    android:contentDescription="TODO" />
+
+                <EditText
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:background="#00ff0000"
+                    android:ems="10"
+                    android:hint="100.0"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
+                    android:paddingStart="5dp"
+                    android:selectAllOnFocus="true"
+                    android:autofillHints="" />
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="24dp"
+                    app:srcCompat="@drawable/ic_altura"
+                    android:contentDescription="TODO" />
+
+                <EditText
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:background="#00ff0000"
+                    android:ems="10"
+                    android:hint="1.78"
+                    android:inputType="numberDecimal"
+                    android:maxLength="4"
+                    android:paddingStart="5dp"
+                    android:selectAllOnFocus="true"
+                    android:autofillHints="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="80dp"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="40dp"
+                    android:background="?attr/colorPrimary" />
+
+                <View
+                    android:layout_width="80dp"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="25dp"
+                    android:background="?attr/colorPrimary" />
+
+                <View
+                    android:layout_width="80dp"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="25dp"
+                    android:background="?attr/colorPrimary" />
+            </LinearLayout>
+
+
+            <!-- Email -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingStart="70dp">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:text="Email"
+                    android:textColor="?attr/colorPrimary"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="18dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    app:srcCompat="@drawable/ic_email"
+                    android:contentDescription="TODO" />
+
+                <EditText
+                    android:layout_width="260dp"
+                    android:layout_height="32dp"
+                    android:background="#00ff0000"
+                    android:ems="10"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="5dp"
+                    android:selectAllOnFocus="true"
+                    tools:ignore="LabelFor"
+                    android:autofillHints="" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:background="?attr/colorPrimary" />
+
+            <!-- Senha -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingStart="70dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:text="Senha"
+                    android:textColor="?attr/colorPrimary"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="18dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    app:srcCompat="@drawable/ic_cadeado"
+                    android:contentDescription="TODO" />
+
+                <EditText
+                    android:id="@+id/senha"
+                    android:layout_width="260dp"
+                    android:layout_height="32dp"
+                    android:background="#00ff0000"
+                    android:ems="10"
+                    android:inputType="textPassword"
+                    android:paddingStart="5dp"
+                    tools:ignore="LabelFor"
+                    android:autofillHints="" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:background="?attr/colorPrimary" />
+
+            <!-- Botao cadastro -->
+
+            <CheckBox
+                android:id="@+id/checkBox4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:text="Mostrar senha"
+                app:layout_constraintBottom_toTopOf="@+id/checkBox3"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="30px"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:onClick="Cadastrar"
+                    android:text="Cadastrar" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

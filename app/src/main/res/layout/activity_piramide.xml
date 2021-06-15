@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorOnPrimary"
+    tools:context=".Piramide">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/main_toolbar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_light"
+                        android:text="Pirâmide Alimentar"
+                        android:textAlignment="center"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <!-- Breve descricao Pirâmide -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_light"
+                        android:justificationMode="inter_word"
+                        android:text="@string/desc_piramide"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_light"
+                        android:justificationMode="inter_word"
+                        android:text="@string/desc_piramide2"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- Imagem da Pirâmide -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/borda"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="300dp"
+                        android:layout_gravity="center_vertical"
+                        android:padding="10dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/piramide"
+                        android:contentDescription="TODO" />
+                </LinearLayout>
+
+                <!-- Grupo 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_medium"
+                        android:justificationMode="inter_word"
+                        android:text="Grupo 1 - Cereais, pães e tubérculos"
+                        android:textColor="#3A5701"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_light"
+                        android:justificationMode="inter_word"
+                        android:text="@string/grupo1"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- Grupo 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_medium"
+                        android:justificationMode="inter_word"
+                        android:text="Grupo 2 - Hortaliças"
+                        android:textColor="#347537"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_light"
+                        android:justificationMode="inter_word"
+                        android:text="@string/grupo2"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- Grupo 3 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_medium"
+                        android:justificationMode="inter_word"
+                        android:text="Grupo 3 - Frutas"
+                        android:textColor="#673AB7"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_light"
+                        android:justificationMode="inter_word"
+                        android:text="@string/grupo3"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- Grupo 4 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_medium"
+                        android:justificationMode="inter_word"
+                        android:text="Grupo 4 - Leite e derivados"
+                        android:textColor="#FF5722"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_light"
+                        android:justificationMode="inter_word"
+                        android:text="@string/grupo4"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- Grupo 5 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_medium"
+                        android:justificationMode="inter_word"
+                        android:text="Grupo 5 - Carnes e ovos"
+                        android:textColor="#3F51B5"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_light"
+                        android:justificationMode="inter_word"
+                        android:text="@string/grupo5"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- Grupo 6 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_medium"
+                        android:justificationMode="inter_word"
+                        android:text="Grupo 6 - Leguminosas"
+                        android:textColor="#9C27B0"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_light"
+                        android:justificationMode="inter_word"
+                        android:text="@string/grupo6"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- Grupo 7 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_medium"
+                        android:justificationMode="inter_word"
+                        android:text="Grupo 7 - Óleos e gorduras"
+                        android:textColor="#3E4259"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_light"
+                        android:justificationMode="inter_word"
+                        android:text="@string/grupo7"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- Grupo 8 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_medium"
+                        android:justificationMode="inter_word"
+                        android:text="Grupo 8 - Açúcares"
+                        android:textColor="#8F662A"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_light"
+                        android:justificationMode="inter_word"
+                        android:text="@string/grupo8"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start">
+
+        <include layout="@layout/main_nav_drawer" />
+
+    </RelativeLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

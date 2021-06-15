@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorOnPrimary"
+    tools:context=".Porcoes">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/main_toolbar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <!-- Breve descricao Pirâmide -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_light"
+                        android:text="Porções"
+                        android:textAlignment="center"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_medium"
+                        android:justificationMode="inter_word"
+                        android:text="O que conta como uma porção?"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_light"
+                        android:justificationMode="inter_word"
+                        android:text="@string/desc_porcoes"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_light"
+                        android:justificationMode="inter_word"
+                        android:text="@string/desc_porcoes2"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_light"
+                        android:justificationMode="inter_word"
+                        android:text="@string/desc_porcoes3"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+                <!-- Grupo 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_medium"
+                        android:justificationMode="inter_word"
+                        android:text="Grupo 1 - Uma porção equivale a 150 Kcal:"
+                        android:textColor="#3A5701"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <!-- Imagem Porcao Grupo 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:padding="10dp"
+                        android:src="@drawable/grupo1"
+                        android:contentDescription="TODO" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_light"
+                        android:justificationMode="inter_word"
+                        android:text="@string/porcao_grupo1"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- Grupo 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_medium"
+                        android:justificationMode="inter_word"
+                        android:text="Grupo 2 - Uma porção equivale a 15 Kcal:"
+                        android:textColor="#347537"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <!-- Imagem Porcao Grupo 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:padding="10dp"
+                        android:src="@drawable/grupo2"
+                        android:contentDescription="TODO" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_light"
+                        android:justificationMode="inter_word"
+                        android:text="@string/porcao_grupo2"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- Grupo 3 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_medium"
+                        android:justificationMode="inter_word"
+                        android:text="Grupo 3 - Uma porção equivale a 70 Kcal:"
+                        android:textColor="#673AB7"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <!-- Imagem Porcao Grupo 3 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:padding="10dp"
+                        android:src="@drawable/grupo3"
+                        android:contentDescription="TODO" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_light"
+                        android:justificationMode="inter_word"
+                        android:text="@string/porcao_grupo3"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- Grupo 4 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_medium"
+                        android:justificationMode="inter_word"
+                        android:text="Grupo 4 - Uma porção equivale a 120 Kcal:"
+                        android:textColor="#FF5722"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <!-- Imagem Porcao Grupo 4 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:padding="10dp"
+                        android:src="@drawable/grupo4"
+                        android:contentDescription="TODO" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_light"
+                        android:justificationMode="inter_word"
+                        android:text="@string/porcao_grupo4"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- Grupo 5 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_medium"
+                        android:justificationMode="inter_word"
+                        android:text="Grupo 5 - Uma porção equivale a 130 KCAL:"
+                        android:textColor="#3F51B5"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <!-- Imagem Porcao Grupo 5 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:padding="10dp"
+                        android:src="@drawable/grupo5"
+                        android:contentDescription="TODO" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_light"
+                        android:justificationMode="inter_word"
+                        android:text="@string/porcao_grupo5"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- Grupo 6 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_medium"
+                        android:justificationMode="inter_word"
+                        android:text="Grupo 6 - Uma porção equivale a 55 Kcal"
+                        android:textColor="#9C27B0"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <!-- Imagem Porcao Grupo 6 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:padding="10dp"
+                        android:src="@drawable/grupo6"
+                        android:contentDescription="TODO" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_light"
+                        android:justificationMode="inter_word"
+                        android:text="@string/porcao_grupo6"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- Grupo 7 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_medium"
+                        android:justificationMode="inter_word"
+                        android:text="Grupo 7 - Uma porção equivale a 70 Kcal"
+                        android:textColor="#3E4259"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <!-- Imagem Porcao Grupo 7 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:padding="10dp"
+                        android:src="@drawable/grupo7"
+                        android:contentDescription="TODO" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_light"
+                        android:justificationMode="inter_word"
+                        android:text="@string/porcao_grupo7"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- Grupo 8 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_medium"
+                        android:justificationMode="inter_word"
+                        android:text="Grupo 8 - Uma porção equivale a 80 Kcal"
+                        android:textColor="#8F662A"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <!-- Imagem Porcao Grupo 8 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:padding="10dp"
+                        android:src="@drawable/grupo8"
+                        android:contentDescription="TODO" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/raleway_light"
+                        android:justificationMode="inter_word"
+                        android:text="@string/porcao_grupo8"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start">
+
+        <include layout="@layout/main_nav_drawer" />
+
+    </RelativeLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

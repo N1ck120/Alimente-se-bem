@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    // A cor do background
+    <solid android:color="?attr/colorPrimary" />
+
+    // Borda (tamanho e cor)
+    <stroke
+        android:width="1dip"
+        android:color="#d4d4d4" />
+
+    // Arredondamento das bordas
+    <corners
+        android:bottomLeftRadius="5dp"
+        android:bottomRightRadius="5dp"
+        android:topLeftRadius="5dp"
+        android:topRightRadius="5dp" />
+
+</shape>
