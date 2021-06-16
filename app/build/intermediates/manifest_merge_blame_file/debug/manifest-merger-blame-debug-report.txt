@@ -1,0 +1,134 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.tcc"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:5:5-67
+11-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:6:5-79
+12-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:6:22-76
+13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+13-->[org.adblockplus:adblock-android:4.0] /home/nick/.gradle/caches/transforms-2/files-2.1/4ff27d43e9531e62b119c120ffb48dcf/adblock-android-4.0/AndroidManifest.xml:10:5-76
+13-->[org.adblockplus:adblock-android:4.0] /home/nick/.gradle/caches/transforms-2/files-2.1/4ff27d43e9531e62b119c120ffb48dcf/adblock-android-4.0/AndroidManifest.xml:10:22-73
+14
+15    <application
+15-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:8:5-61:19
+16        android:allowBackup="true"
+16-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:9:9-35
+17        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+17-->[androidx.core:core:1.5.0] /home/nick/.gradle/caches/transforms-2/files-2.1/07adfc08fe16d3453ab9291511ec05fe/core-1.5.0/AndroidManifest.xml:24:18-86
+18        android:debuggable="true"
+19        android:icon="@mipmap/ic_launcher"
+19-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:10:9-43
+20        android:label="@string/app_name"
+20-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:11:9-41
+21        android:roundIcon="@mipmap/ic_launcher_round"
+21-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:12:9-54
+22        android:supportsRtl="true"
+22-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:13:9-35
+23        android:theme="@style/Theme.Tcc"
+23-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:15:9-41
+24        android:usesCleartextTraffic="true" >
+24-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:14:9-44
+25        <activity android:name="com.example.tcc.CadastroDeAlimentos" />
+25-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:16:9-57
+25-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:16:19-54
+26        <activity android:name="com.example.tcc.Boasvindas" />
+26-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:17:9-48
+26-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:17:19-45
+27        <activity
+27-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:18:9-20:52
+28            android:name="com.example.tcc.Config"
+28-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:19:13-35
+29            android:screenOrientation="portrait" />
+29-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:20:13-49
+30        <activity
+30-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:21:9-23:52
+31            android:name="com.example.tcc.MainActivity"
+31-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:22:13-41
+32            android:screenOrientation="portrait" />
+32-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:23:13-49
+33        <activity
+33-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:24:9-26:52
+34            android:name="com.example.tcc.SobreApp"
+34-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:25:13-37
+35            android:screenOrientation="portrait" />
+35-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:26:13-49
+36        <activity
+36-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:27:9-29:52
+37            android:name="com.example.tcc.Gadgets"
+37-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:28:13-36
+38            android:screenOrientation="portrait" />
+38-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:29:13-49
+39        <activity
+39-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:30:9-32:52
+40            android:name="com.example.tcc.Calculadora"
+40-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:31:13-40
+41            android:screenOrientation="portrait" />
+41-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:32:13-49
+42        <activity
+42-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:33:9-35:52
+43            android:name="com.example.tcc.Piramide"
+43-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:34:13-37
+44            android:screenOrientation="portrait" />
+44-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:35:13-49
+45        <activity
+45-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:36:9-38:52
+46            android:name="com.example.tcc.Alimentos"
+46-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:37:13-38
+47            android:screenOrientation="portrait" />
+47-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:38:13-49
+48        <activity
+48-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:39:9-41:52
+49            android:name="com.example.tcc.Formulario"
+49-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:40:13-39
+50            android:screenOrientation="portrait" />
+50-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:41:13-49
+51        <activity
+51-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:42:9-44:52
+52            android:name="com.example.tcc.Porcoes"
+52-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:43:13-36
+53            android:screenOrientation="portrait" />
+53-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:44:13-49
+54        <activity
+54-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:45:9-47:52
+55            android:name="com.example.tcc.Login"
+55-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:46:13-34
+56            android:screenOrientation="portrait" />
+56-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:47:13-49
+57        <activity
+57-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:48:9-56:20
+58            android:name="com.example.tcc.SplashScreen"
+58-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:49:13-41
+59            android:screenOrientation="portrait" >
+59-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:50:13-49
+60            <intent-filter>
+60-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:51:13-55:29
+61                <action android:name="android.intent.action.MAIN" />
+61-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:52:17-69
+61-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:52:25-66
+62
+63                <category android:name="android.intent.category.LAUNCHER" />
+63-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:54:17-77
+63-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:54:27-74
+64            </intent-filter>
+65        </activity>
+66
+67        <meta-data
+67-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:58:9-60:57
+68            android:name="preloaded_fonts"
+68-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:59:13-43
+69            android:resource="@array/preloaded_fonts" />
+69-->/home/nick/Documentos/Tcc/app/src/main/AndroidManifest.xml:60:13-54
+70    </application>
+71
+72</manifest>
