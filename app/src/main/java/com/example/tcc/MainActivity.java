@@ -2,14 +2,19 @@ package com.example.tcc;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebSettings;
@@ -27,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
 
     public CardView adm;
-    public int cont;
     public LinearLayout nt1, conect;
 
     SliderView sliderView;
@@ -64,8 +68,17 @@ public class MainActivity extends AppCompatActivity {
 
         isOnline();
         internet();
-
+        createNotificationChannel();
     }
+    private void createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel channel = new NotificationChannel("Canal1", "Canal1", importance);
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+        }
+    }
+
     public boolean isOnline() {
         ConnectivityManager manager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
 
@@ -135,12 +148,18 @@ public class MainActivity extends AppCompatActivity {
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();
         }
-
     }
 
     public void ClickMenu(View view){
         //Abrir Drawer
         openDrawer(drawerLayout);
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "Canal1")
+                .setSmallIcon(R.drawable.ic_notific)
+                .setContentTitle("Já bebeu água hoje??")
+                .setContentText("Segundo estimativa é recomendado beber 2 litros de água ao dia")
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
+        notificationManager.notify(1, builder.build());
     }
 
     public static void openDrawer(DrawerLayout drawerLayout) {

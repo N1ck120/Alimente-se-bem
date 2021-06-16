@@ -53,7 +53,7 @@ public class Alimentos extends AppCompatActivity {
             WebView myWebView = (WebView) findViewById(R.id.lista);
             WebSettings webSettings = myWebView.getSettings();
             webSettings.setJavaScriptEnabled(true);
-            myWebView.loadUrl("http://siad.net.br/");
+            myWebView.loadUrl("http://siad.net.br/app/listaAppDark.php");
             myWebView.setWebViewClient(new WebViewClient() {
                 @Override
                 public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {

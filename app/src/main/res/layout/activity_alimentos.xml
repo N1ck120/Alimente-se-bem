@@ -5,6 +5,7 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/colorOnPrimary"
     tools:context=".Alimentos">
 
     <LinearLayout
@@ -57,8 +58,10 @@
             android:id="@+id/erro"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:visibility="gone"
-            android:orientation="vertical">
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical"
+            android:visibility="gone">
 
             <ImageView
                 android:id="@+id/imageView3"
@@ -72,9 +75,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:textColor="?attr/colorOnSecondary"
                 android:gravity="center_horizontal"
                 android:text="Sem conexão com a internet"
+                android:textColor="?attr/colorOnSecondary"
                 android:textSize="20sp" />
 
             <Button
@@ -83,9 +86,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="10dp"
-                android:textColor="?attr/colorOnSecondary"
                 android:onClick="reconectar"
-                android:text="Tentar novamente" />
+                android:text="Tentar novamente"
+                android:textColor="?attr/colorOnSecondary" />
         </LinearLayout>
 
     </LinearLayout>
