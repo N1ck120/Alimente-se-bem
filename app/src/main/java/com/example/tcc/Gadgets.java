@@ -1,8 +1,10 @@
 package com.example.tcc;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 
@@ -17,6 +19,17 @@ public class Gadgets extends AppCompatActivity {
 
         //Estanciar variavel
         drawerLayout = findViewById(R.id.drawer_layout);
+        verif();
+    }
+    public void verif(){
+        //Verifica qual o tema escolhido pelo usuário
+        SharedPreferences prefs = getSharedPreferences("prefs", MODE_PRIVATE);
+        SplashScreen.escolha = prefs.getInt("escolha", 0);
+        if (SplashScreen.escolha == 0){
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        }else if (SplashScreen.escolha == 1){
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        }
     }
 
     public void ClickMenu(View view){

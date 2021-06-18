@@ -13,7 +13,6 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.Tcc">
-        <activity android:name=".CadastroDeAlimentos" />
         <activity android:name=".Boasvindas" />
         <activity
             android:name=".Config"

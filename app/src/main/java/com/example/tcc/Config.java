@@ -45,6 +45,17 @@ public class Config extends AppCompatActivity {
             editor.putInt("escolha", SplashScreen.escolha);
             editor.apply();
         });
+        verif();
+    }
+    public void verif(){
+        //Verifica qual o tema escolhido pelo usuário
+        SharedPreferences prefs = getSharedPreferences("prefs", MODE_PRIVATE);
+        SplashScreen.escolha = prefs.getInt("escolha", 0);
+        if (SplashScreen.escolha == 0){
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        }else if (SplashScreen.escolha == 1){
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        }
     }
 
     public void ClickMenu(View view){

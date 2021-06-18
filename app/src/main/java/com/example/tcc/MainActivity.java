@@ -1,6 +1,7 @@
 package com.example.tcc;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.cardview.widget.CardView;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
@@ -13,6 +14,7 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -69,7 +71,20 @@ public class MainActivity extends AppCompatActivity {
         isOnline();
         internet();
         createNotificationChannel();
+        verif();
     }
+
+    public void verif(){
+        //Verifica qual o tema escolhido pelo usuário
+        SharedPreferences prefs = getSharedPreferences("prefs", MODE_PRIVATE);
+        SplashScreen.escolha = prefs.getInt("escolha", 0);
+        if (SplashScreen.escolha == 0){
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        }else if (SplashScreen.escolha == 1){
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        }
+    }
+
     private void createNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             int importance = NotificationManager.IMPORTANCE_DEFAULT;

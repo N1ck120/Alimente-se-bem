@@ -1,10 +1,12 @@
 package com.example.tcc;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +17,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Space;
 import android.widget.Toast;
 
 public class Alimentos extends AppCompatActivity {
@@ -24,6 +27,7 @@ public class Alimentos extends AppCompatActivity {
     private WebView wv;
     public ImageView ref;
     public LinearLayout conect2;
+    public Space r_space;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +44,7 @@ public class Alimentos extends AppCompatActivity {
             WebView myWebView = (WebView) findViewById(R.id.lista);
             WebSettings webSettings = myWebView.getSettings();
             webSettings.setJavaScriptEnabled(true);
-            myWebView.loadUrl("http://siad.net.br/app/listaApp.php");
+            myWebView.loadUrl("http://10.0.0.133/bdapp/listaApp.php");
             myWebView.setWebViewClient(new WebViewClient() {
                 @Override
                 public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
@@ -53,7 +57,7 @@ public class Alimentos extends AppCompatActivity {
             WebView myWebView = (WebView) findViewById(R.id.lista);
             WebSettings webSettings = myWebView.getSettings();
             webSettings.setJavaScriptEnabled(true);
-            myWebView.loadUrl("http://siad.net.br/app/listaAppDark.php");
+            myWebView.loadUrl("http://10.0.0.133/bdapp/listaAppDark.php");
             myWebView.setWebViewClient(new WebViewClient() {
                 @Override
                 public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
@@ -65,7 +69,19 @@ public class Alimentos extends AppCompatActivity {
 
         isOnline();
         internet();
+        verif();
     }
+    public void verif(){
+        //Verifica qual o tema escolhido pelo usuário
+        SharedPreferences prefs = getSharedPreferences("prefs", MODE_PRIVATE);
+        SplashScreen.escolha = prefs.getInt("escolha", 0);
+        if (SplashScreen.escolha == 0){
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        }else if (SplashScreen.escolha == 1){
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        }
+    }
+
     public boolean isOnline() {
         ConnectivityManager manager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
 
@@ -76,13 +92,14 @@ public class Alimentos extends AppCompatActivity {
     public void internet(){
         if(!isOnline()) {
             wv.setVisibility(View.GONE);
-            ref.setVisibility(View.GONE);
+            ref.setVisibility(View.INVISIBLE);
             conect2.setVisibility(View.VISIBLE);
 
         }else {
             wv.setVisibility(View.VISIBLE);
             ref.setVisibility(View.VISIBLE);
             conect2.setVisibility(View.GONE);
+
         }
 
     }
@@ -98,11 +115,10 @@ public class Alimentos extends AppCompatActivity {
             WebView myWebView = (WebView) findViewById(R.id.lista);
             WebSettings webSettings = myWebView.getSettings();
             webSettings.setJavaScriptEnabled(true);
-            myWebView.loadUrl("http://siad.net.br/");
+            myWebView.loadUrl("http://siad.net.br/app/listaAppDark.php");
         }
 
     }
-
 
     public void  refresh(View view){
 
@@ -120,7 +136,7 @@ public class Alimentos extends AppCompatActivity {
                 WebSettings webSettings = myWebView.getSettings();
                 webSettings.setJavaScriptEnabled(true);
                 wv.clearCache(true);
-                myWebView.loadUrl("http://siad.net.br/");
+                myWebView.loadUrl("http://siad.net.br/app/listaAppDark.php");
             }
             Context context = getApplicationContext();
             CharSequence text = "Recarregando...";
@@ -215,11 +231,6 @@ public class Alimentos extends AppCompatActivity {
         super.onPause();
         //Fechar Drawer
         MainActivity.closeDrawer(drawerLayout);
-    }
-
-    public void openCadAlimento (View view){
-        Intent i = new Intent(Alimentos.this, CadastroDeAlimentos.class);
-        startActivity(i);
     }
 
 }

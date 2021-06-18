@@ -46,7 +46,6 @@
                 android:onClick="refresh"
                 app:srcCompat="@drawable/ic_baseline_refresh_24" />
 
-
         </LinearLayout>
 
         <WebView
