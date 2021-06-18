@@ -44,7 +44,7 @@ public class Alimentos extends AppCompatActivity {
             WebView myWebView = (WebView) findViewById(R.id.lista);
             WebSettings webSettings = myWebView.getSettings();
             webSettings.setJavaScriptEnabled(true);
-            myWebView.loadUrl("http://10.0.0.133/bdapp/listaApp.php");
+            myWebView.loadUrl("http://siad.net.br/app/listaApp.php");
             myWebView.setWebViewClient(new WebViewClient() {
                 @Override
                 public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
@@ -57,7 +57,7 @@ public class Alimentos extends AppCompatActivity {
             WebView myWebView = (WebView) findViewById(R.id.lista);
             WebSettings webSettings = myWebView.getSettings();
             webSettings.setJavaScriptEnabled(true);
-            myWebView.loadUrl("http://10.0.0.133/bdapp/listaAppDark.php");
+            myWebView.loadUrl("http://siad.net.br/app/listaAppDark.php");
             myWebView.setWebViewClient(new WebViewClient() {
                 @Override
                 public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
