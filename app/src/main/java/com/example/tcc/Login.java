@@ -54,6 +54,7 @@ public class Login extends AppCompatActivity {
     }
     // Login Usuario
     public void login() {
+        // Virifica se o email e senha sao validos no Mysql
         StringRequest request = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -70,6 +71,7 @@ public class Login extends AppCompatActivity {
 
             }
         }){
+            //Joga as informcaoes no php
             @Override
             protected Map<String, String> getParams() throws AuthFailureError{
                 Map<String, String> params = new HashMap<>();
