@@ -58,6 +58,8 @@ public class Login extends AppCompatActivity {
         StringRequest request = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
+                // "1" e a confirmacao vinda do php com resultado da verificacao do login e senha
+                // o acesso ao app e liberado.
                 if (response.contains("1")){
                     startActivity(new Intent(getApplicationContext(), MainActivity.class));
                 }else{
