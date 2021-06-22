@@ -25,9 +25,16 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -71,13 +78,44 @@ public class MainActivity extends AppCompatActivity {
         sliderView.startAutoCycle();
 
         nome = findViewById(R.id.nome_toolbar);
-        nome.setText("Olá" + " " + Login.email2);
+        if (Login.keep == false){
+            nome.setText("Olá" + " " + Login.email1);
+        }else{
+            nome.setText("Olá" + " " + Login.email2);
+        }
+
 
         isOnline();
         internet();
-        createNotificationChannel();
+        //createNotificationChannel();
         verif();
     }
+    /*public void infoconta(){
+            String vcpf = cpf.getText().toString();
+            String vcpf = cpf.getText().toString();
+
+            stringRequest = new StringRequest(Request.Method.GET, urlWebServicesDesenvolvimentoBusca,
+                    new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+                            Toast.makeText(getApplicationContext(), response, Toast.LENGTH_LONG).show();
+                        }
+                    },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            Log.e("teste", error.getMessage());
+                        }
+                    }) {
+                @Override
+                protected Map<String, String> getParams() {
+                    Map<String, String> params = new HashMap<>();
+                    params.put("cpf", vcpf);
+                    return params;
+                }
+            };
+            requestQueue.add(stringRequest);
+    }*/
 
     public void verif(){
         //Verifica qual o tema escolhido pelo usuário
@@ -90,14 +128,14 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void createNotificationChannel() {
+    /*private void createNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             int importance = NotificationManager.IMPORTANCE_DEFAULT;
             NotificationChannel channel = new NotificationChannel("Canal1", "Lembretes de saúde", importance);
             NotificationManager notificationManager = getSystemService(NotificationManager.class);
             notificationManager.createNotificationChannel(channel);
         }
-    }
+    }*/
 
     public boolean isOnline() {
         ConnectivityManager manager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -173,13 +211,13 @@ public class MainActivity extends AppCompatActivity {
     public void ClickMenu(View view){
         //Abrir Drawer
         openDrawer(drawerLayout);
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "Canal1")
+        /*NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "Canal1")
                 .setSmallIcon(R.drawable.ic_notific)
                 .setContentTitle("Já bebeu água hoje??")
                 .setContentText("Segundo estimativa é recomendado beber 2 litros de água ao dia")
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT);
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
-        notificationManager.notify(1, builder.build());
+        notificationManager.notify(1, builder.build());*/
     }
 
     public static void openDrawer(DrawerLayout drawerLayout) {

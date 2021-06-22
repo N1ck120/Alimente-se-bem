@@ -81,7 +81,8 @@
                     app:layout_constraintBottom_toTopOf="@+id/switch2"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:visibility="invisible"/>
 
                 <Switch
                     android:id="@+id/switch2"
@@ -95,7 +96,8 @@
                     android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/switch1"
-                    tools:checked="true" />
+                    tools:checked="true"
+                    android:visibility="invisible"/>
 
                 <ImageView
                     android:layout_width="27dp"
@@ -105,7 +107,8 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/switch2"
                     app:srcCompat="@drawable/ic_notif"
-                    android:contentDescription="TODO" />
+                    android:contentDescription="TODO"
+                    android:visibility="invisible"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>

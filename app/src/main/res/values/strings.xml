@@ -184,8 +184,7 @@
         1 colher de sopa de Achocolatado comum
         1 unidade de bombom
     </string>
-    <string name="texto_introducao">
-        NOME DO APP foi desenvolvido com intuito de informar sobre os
+    <string name="texto_introducao"><b>Alimente-se bem</b> foi desenvolvido com intuito de informar sobre os
 alimentos que ingerimos diariamente. Todo conteúdo disponível
 no aplicativo foi coletado por meio de pesquisas efetuadas via internet,
         rótulos de alimentos, pesquisas cientificas e órgãos governamentais.
