@@ -82,11 +82,20 @@ public class Formulario extends AppCompatActivity {
             StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
-                    if (response.equals("success")) {
+                    if (response.contains("1")) {
+                        nomeCad.setText("");
+                        idadeCad.setText("");
+                        alturaCad.setText("");
+                        pesoCad.setText("");
+                        emailCad.setText("");
+                        senhaCad.setText("");
                         Toast.makeText(Formulario.this, "Cadastro efetuado!", Toast.LENGTH_SHORT).show();
-                    } else if (response.equals("failure")) {
+                    } else if (response.contains("0")) {
                         Toast.makeText(Formulario.this, "Cadastro não efetuado! ", Toast.LENGTH_SHORT).show();
                     }
+                    //Retornar para a tela de login
+                    //onBackPressed();
+
                 }
             }, new Response.ErrorListener() {
                 @Override

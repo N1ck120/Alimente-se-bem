@@ -22,6 +22,7 @@ import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
     public CardView adm;
     public LinearLayout nt1, conect;
+    public TextView nome;
 
     SliderView sliderView;
     final int[] images = {
@@ -68,6 +70,9 @@ public class MainActivity extends AppCompatActivity {
         sliderView.setSliderTransformAnimation(SliderAnimations.FADETRANSFORMATION);
         sliderView.startAutoCycle();
 
+        nome = findViewById(R.id.nome_toolbar);
+        nome.setText("Olá" + " " + Login.email2);
+
         isOnline();
         internet();
         createNotificationChannel();
@@ -88,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
     private void createNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             int importance = NotificationManager.IMPORTANCE_DEFAULT;
-            NotificationChannel channel = new NotificationChannel("Canal1", "Canal1", importance);
+            NotificationChannel channel = new NotificationChannel("Canal1", "Lembretes de saúde", importance);
             NotificationManager notificationManager = getSystemService(NotificationManager.class);
             notificationManager.createNotificationChannel(channel);
         }
@@ -245,8 +250,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void ClickLogout(View view){
         //Sair da conta
+        SplashScreen.prefs = getSharedPreferences("prefs", MODE_PRIVATE);
+        SharedPreferences.Editor editor = SplashScreen.prefs.edit();
+        editor.putBoolean("keep", false);
+        editor.apply();
         redirectActivity(this,Login.class);
         finish();
+
     }
 
     public static void sair(Activity activity) {

@@ -61,7 +61,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
-                        android:text="Com base nas informações fornecidas:"
+                        android:text="Acesso rápido"
                         android:textSize="20sp" />
                 </androidx.cardview.widget.CardView>
 
@@ -85,7 +85,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="5dp"
                             android:gravity="center_horizontal|center_vertical"
-                            android:text="Seu IMC:\n20"
+                            android:text="Calcular \nIMC"
                             android:textSize="20sp" />
 
                     </androidx.cardview.widget.CardView>
@@ -101,7 +101,7 @@
                             android:layout_height="110dp"
                             android:layout_margin="5dp"
                             android:gravity="center_horizontal|center_vertical"
-                            android:text="Situação:\nSobrepeso"
+                            android:text="Pirâmide\nAlimentar"
                             android:textSize="20sp" />
 
                     </androidx.cardview.widget.CardView>
@@ -117,7 +117,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="5dp"
                             android:gravity="center_horizontal|center_vertical"
-                            android:text="Dieta\nsugerida:\nLegumes"
+                            android:text="Alimentos"
                             android:textSize="20sp" />
                     </androidx.cardview.widget.CardView>
 

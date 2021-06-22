@@ -91,8 +91,13 @@ public class Piramide extends AppCompatActivity {
 
     public void ClickLogout(View view){
         //Sair da conta
+        SplashScreen.prefs = getSharedPreferences("prefs", MODE_PRIVATE);
+        SharedPreferences.Editor editor = SplashScreen.prefs.edit();
+        editor.putBoolean("keep", false);
+        editor.apply();
         MainActivity.redirectActivity(this,Login.class);
         finish();
+
     }
     @Override
     public void onBackPressed() {

@@ -16,6 +16,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:gravity="center_horizontal|center_vertical"
             android:orientation="vertical">
 
@@ -188,16 +189,15 @@
                 android:id="@+id/resultCad"
                 android:layout_width="177dp"
                 android:layout_height="35dp"
-                android:text=""
                 android:layout_gravity="center_horizontal"
-                />
+                android:text="" />
 
             <Button
                 android:id="@+id/btnLogar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cadastrar"
-                android:onClick="Cadastrar"/>
+                android:onClick="Cadastrar"
+                android:text="Cadastrar" />
 
         </LinearLayout>
     </ScrollView>
