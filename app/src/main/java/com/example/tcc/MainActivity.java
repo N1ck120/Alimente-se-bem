@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
         SliderAdapter sliderAdapter = new SliderAdapter(images);
 
-        WebView myWebView = (WebView) findViewById(R.id.not);
+        WebView myWebView = findViewById(R.id.not);
         WebSettings webSettings = myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         myWebView.loadUrl("https://www.uol.com.br/vivabem/saude/ultimas/");
@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
     public void reconectar(View view){
         isOnline();
         internet();
-        WebView myWebView = (WebView) findViewById(R.id.not);
+        WebView myWebView = findViewById(R.id.not);
         WebSettings webSettings = myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         myWebView.loadUrl("https://www.uol.com.br/vivabem/saude/ultimas/");
@@ -157,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
     public void  refresh(View view){
         isOnline();
         if (isOnline()){
-            WebView myWebView = (WebView) findViewById(R.id.not);
+            WebView myWebView = findViewById(R.id.not);
             WebSettings webSettings = myWebView.getSettings();
             webSettings.setJavaScriptEnabled(true);
             myWebView.clearCache(true);

@@ -25,9 +25,7 @@ public class Boasvindas extends AppCompatActivity {
         termos();
     }
     public void  termos(){
-        aceito.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            prosseguir.setEnabled(aceito.isChecked());
-        });
+        aceito.setOnCheckedChangeListener((buttonView, isChecked) -> prosseguir.setEnabled(aceito.isChecked()));
     }
     @Override
     public void onBackPressed() {

@@ -7,7 +7,6 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.CompoundButton;
 import android.widget.Switch;
 
 public class Config extends AppCompatActivity {

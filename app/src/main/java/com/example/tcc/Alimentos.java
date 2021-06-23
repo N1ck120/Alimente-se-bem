@@ -39,7 +39,7 @@ public class Alimentos extends AppCompatActivity {
         wv = findViewById(R.id.lista);
 
         if(SplashScreen.escolha == 0){
-            WebView myWebView = (WebView) findViewById(R.id.lista);
+            WebView myWebView = findViewById(R.id.lista);
             WebSettings webSettings = myWebView.getSettings();
             webSettings.setJavaScriptEnabled(true);
             myWebView.loadUrl("http://siad.net.br/app/listaApp.php");
@@ -51,7 +51,7 @@ public class Alimentos extends AppCompatActivity {
                 }
             });
         }else{
-            WebView myWebView = (WebView) findViewById(R.id.lista);
+            WebView myWebView = findViewById(R.id.lista);
             WebSettings webSettings = myWebView.getSettings();
             webSettings.setJavaScriptEnabled(true);
             myWebView.loadUrl("http://siad.net.br/app/listaAppDark.php");
@@ -87,12 +87,12 @@ public class Alimentos extends AppCompatActivity {
         isOnline();
         internet();
         if(SplashScreen.escolha == 0){
-            WebView myWebView = (WebView) findViewById(R.id.lista);
+            WebView myWebView = findViewById(R.id.lista);
             WebSettings webSettings = myWebView.getSettings();
             webSettings.setJavaScriptEnabled(true);
             myWebView.loadUrl("http://siad.net.br/app/listaApp.php");
         }else{
-            WebView myWebView = (WebView) findViewById(R.id.lista);
+            WebView myWebView = findViewById(R.id.lista);
             WebSettings webSettings = myWebView.getSettings();
             webSettings.setJavaScriptEnabled(true);
             myWebView.loadUrl("http://siad.net.br/app/listaAppDark.php");
@@ -103,13 +103,13 @@ public class Alimentos extends AppCompatActivity {
         isOnline();
         if (isOnline()){
             if(SplashScreen.escolha == 0){
-                WebView myWebView = (WebView) findViewById(R.id.lista);
+                WebView myWebView = findViewById(R.id.lista);
                 WebSettings webSettings = myWebView.getSettings();
                 webSettings.setJavaScriptEnabled(true);
                 wv.clearCache(true);
                 myWebView.loadUrl("http://siad.net.br/app/listaApp.php");
             }else{
-                WebView myWebView = (WebView) findViewById(R.id.lista);
+                WebView myWebView = findViewById(R.id.lista);
                 WebSettings webSettings = myWebView.getSettings();
                 webSettings.setJavaScriptEnabled(true);
                 wv.clearCache(true);

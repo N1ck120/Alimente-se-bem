@@ -12,8 +12,6 @@ import android.widget.Toast;
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
@@ -58,30 +56,22 @@ public class Formulario extends AppCompatActivity {
                 idade.equals("")) {
             Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_SHORT).show();
         } else {
-            StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
-                @Override
-                public void onResponse(String response) {
-                    if (response.contains("1")) {
-                        nomeCad.setText("");
-                        idadeCad.setText("");
-                        alturaCad.setText("");
-                        pesoCad.setText("");
-                        emailCad.setText("");
-                        senhaCad.setText("");
-                        Toast.makeText(Formulario.this, "Cadastro efetuado!", Toast.LENGTH_SHORT).show();
-                        onBackPressed();
-                    } else if (response.contains("0")) {
-                        Toast.makeText(Formulario.this, "Cadastro não efetuado! ", Toast.LENGTH_SHORT).show();
-                    }
-                    //Retornar para a tela de login
-                    //onBackPressed();
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, response -> {
+                if (response.contains("1")) {
+                    nomeCad.setText("");
+                    idadeCad.setText("");
+                    alturaCad.setText("");
+                    pesoCad.setText("");
+                    emailCad.setText("");
+                    senhaCad.setText("");
+                    Toast.makeText(Formulario.this, "Cadastro efetuado!", Toast.LENGTH_SHORT).show();
+                    onBackPressed();
+                } else if (response.contains("0")) {
+                    Toast.makeText(Formulario.this, "Cadastro não efetuado! ", Toast.LENGTH_SHORT).show();
                 }
-            }, new Response.ErrorListener() {
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                    Toast.makeText(getApplicationContext(), error.toString().trim(), Toast.LENGTH_SHORT).show();
-                }
-            }) {
+                //Retornar para a tela de login
+                //onBackPressed();
+            }, error -> Toast.makeText(getApplicationContext(), error.toString().trim(), Toast.LENGTH_SHORT).show()) {
                 @Override
                 protected Map<String, String> getParams() throws AuthFailureError {
                     Map<String, String> data = new HashMap<>();

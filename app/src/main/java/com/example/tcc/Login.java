@@ -1,19 +1,21 @@
 package com.example.tcc;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
@@ -26,7 +28,7 @@ public class Login extends AppCompatActivity {
     public static String email1, senha1, email2, senha2;
     private CheckBox kc;
     public  EditText eTemail, eTsenha;
-    private String URL = "http://siad.net.br/app/loginUsuarioPHP.php";
+    private final String URL = "http://siad.net.br/app/loginUsuarioPHP.php";
     Button btn_login;
 
     private CheckBox msenha;
@@ -47,28 +49,61 @@ public class Login extends AppCompatActivity {
         kc.setChecked(keep);
 
         mostrarsenha();
-        keep();
 
-        btn_login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        if (isOnline()){
+            keep();
+        }else if(!isOnline() && keep){
+            email2 = prefs.getString("email", "" );
+            senha2 = prefs.getString("senha", "");
+            eTemail.setText(email2);
+            eTsenha.setText(senha2);
 
-                email1 = eTemail.getText().toString();
-                senha1 = eTsenha.getText().toString();
-
-                if (kc.isChecked()){
+            kc.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked){
+                        keep = true;
+                    }else {
+                        keep = false;
+                    }
                     SplashScreen.prefs = getSharedPreferences("prefs", MODE_PRIVATE);
                     SharedPreferences.Editor editor = SplashScreen.prefs.edit();
-                    editor.putString("email", email1);
-                    editor.putString("senha", senha1);
-                    editor.putBoolean("keep", true);
+                    editor.putBoolean("keep", keep);
                     editor.apply();
-                    login();
-                }else{
-                    login();
                 }
+            });
+
+            Context context = getApplicationContext();
+            CharSequence text = "Sem internet!";
+            int duration = Toast.LENGTH_SHORT;
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+        }
+
+        btn_login.setOnClickListener(view -> {
+
+            email1 = eTemail.getText().toString();
+            senha1 = eTsenha.getText().toString();
+
+            if (kc.isChecked()){
+                SplashScreen.prefs = getSharedPreferences("prefs", MODE_PRIVATE);
+                SharedPreferences.Editor editor = SplashScreen.prefs.edit();
+                editor.putString("email", email1);
+                editor.putString("senha", senha1);
+                editor.putBoolean("keep", true);
+                editor.apply();
+                login();
+            }else{
+                login();
             }
         });
+        isOnline();
+    }
+    public boolean isOnline() {
+        ConnectivityManager manager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        return manager.getActiveNetworkInfo() != null &&
+                manager.getActiveNetworkInfo().isConnectedOrConnecting();
     }
 
     public  void keep(){
@@ -81,23 +116,17 @@ public class Login extends AppCompatActivity {
             eTsenha.setText(senha2);
 
                 // Virifica se o email e senha sao validos no Mysql
-                StringRequest request = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        // "1" e a confirmacao vinda do php com resultado da verificacao do login e senha
-                        // o acesso ao app e liberado.
-                        if (response.contains("1")){
-                            Intent i = new Intent(Login.this, MainActivity.class);
-                            startActivity(i);
-                            finish();
-                        }else{
-                            Toast.makeText(getApplicationContext(), "Usuario ou senha incorretos", Toast.LENGTH_SHORT).show();
-                        }
+                StringRequest request = new StringRequest(Request.Method.POST, URL, response -> {
+                    // "1" e a confirmacao vinda do php com resultado da verificacao do login e senha
+                    // o acesso ao app e liberado.
+                    if (response.contains("1")){
+                        Intent i = new Intent(Login.this, MainActivity.class);
+                        startActivity(i);
+                        finish();
+                    }else{
+                        Toast.makeText(getApplicationContext(), "Usuario ou senha incorretos", Toast.LENGTH_SHORT).show();
                     }
-                }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError volleyError) {
-                    }
+                }, volleyError -> {
                 }){
                     //Joga as informcaoes no php
                     @Override
@@ -114,23 +143,17 @@ public class Login extends AppCompatActivity {
     // Login Usuario
     public void login() {
         // Virifica se o email e senha sao validos no Mysql
-        StringRequest request = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                // "1" e a confirmacao vinda do php com resultado da verificacao do login e senha
-                // o acesso ao app e liberado.
-                if (response.contains("1")){
-                    Intent i = new Intent(Login.this, MainActivity.class);
-                    startActivity(i);
-                    finish();
-                }else{
-                    Toast.makeText(getApplicationContext(), "Usuario ou senha incorretos", Toast.LENGTH_SHORT).show();
-                }
+        StringRequest request = new StringRequest(Request.Method.POST, URL, response -> {
+            // "1" e a confirmacao vinda do php com resultado da verificacao do login e senha
+            // o acesso ao app e liberado.
+            if (response.contains("1")){
+                Intent i = new Intent(Login.this, MainActivity.class);
+                startActivity(i);
+                finish();
+            }else{
+                Toast.makeText(getApplicationContext(), "Usuario ou senha incorretos", Toast.LENGTH_SHORT).show();
             }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError volleyError) {
-            }
+        }, volleyError -> {
         }){
             //Joga as informcaoes no php
             @Override
