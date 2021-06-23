@@ -29,12 +29,10 @@ public class Boasvindas extends AppCompatActivity {
             prosseguir.setEnabled(aceito.isChecked());
         });
     }
-
     @Override
     public void onBackPressed() {
         MainActivity.sair(this);
     }
-
     public void Prosseguir(View view){
         //Salva pra não abrir esta tela novamente e redireciona para a Home
         SplashScreen.prefs = getSharedPreferences("prefs", MODE_PRIVATE);
@@ -47,7 +45,6 @@ public class Boasvindas extends AppCompatActivity {
         }else if (SplashScreen.escolha == 1){
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
         }
-
         MainActivity.redirectActivity(this,Login.class);
         finish();
     }

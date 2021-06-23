@@ -1,22 +1,16 @@
 package com.example.tcc;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
 import androidx.cardview.widget.CardView;
-import androidx.core.app.NotificationCompat;
-import androidx.core.app.NotificationManagerCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebSettings;
@@ -25,16 +19,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -67,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         conect = findViewById(R.id.erro);
 
         SliderAdapter sliderAdapter = new SliderAdapter(images);
+
         WebView myWebView = (WebView) findViewById(R.id.not);
         WebSettings webSettings = myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
@@ -78,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         sliderView.startAutoCycle();
 
         nome = findViewById(R.id.nome_toolbar);
-        if (Login.keep == false){
+        if (!Login.keep){
             nome.setText("Olá" + " " + Login.email1);
         }else{
             nome.setText("Olá" + " " + Login.email2);
@@ -88,7 +76,6 @@ public class MainActivity extends AppCompatActivity {
         isOnline();
         internet();
         //createNotificationChannel();
-        verif();
     }
     /*public void infoconta(){
             String vcpf = cpf.getText().toString();
@@ -116,17 +103,6 @@ public class MainActivity extends AppCompatActivity {
             };
             requestQueue.add(stringRequest);
     }*/
-
-    public void verif(){
-        //Verifica qual o tema escolhido pelo usuário
-        SharedPreferences prefs = getSharedPreferences("prefs", MODE_PRIVATE);
-        SplashScreen.escolha = prefs.getInt("escolha", 0);
-        if (SplashScreen.escolha == 0){
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-        }else if (SplashScreen.escolha == 1){
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-        }
-    }
 
     /*private void createNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -163,26 +139,21 @@ public class MainActivity extends AppCompatActivity {
         webSettings.setJavaScriptEnabled(true);
         myWebView.loadUrl("https://www.uol.com.br/vivabem/saude/ultimas/");
     }
-
-
     public void CardCalculadora(View view){
         // Redirecionar para Calculadora de IMC
         redirectActivity(this,Calculadora.class);
         finish();
     }
-
     public void CardPiramide(View view){
         // Redirecionar para Calculadora de IMC
         redirectActivity(this,Piramide.class);
         finish();
     }
-
     public void CardAlimentos(View view){
         // Redirecionar para Calculadora de IMC
         redirectActivity(this,Alimentos.class);
         finish();
     }
-
     public void  refresh(View view){
         isOnline();
         if (isOnline()){
@@ -207,7 +178,6 @@ public class MainActivity extends AppCompatActivity {
             toast.show();
         }
     }
-
     public void ClickMenu(View view){
         //Abrir Drawer
         openDrawer(drawerLayout);
@@ -219,17 +189,14 @@ public class MainActivity extends AppCompatActivity {
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
         notificationManager.notify(1, builder.build());*/
     }
-
     public static void openDrawer(DrawerLayout drawerLayout) {
         // Abrir o Layout drawer
         drawerLayout.openDrawer(GravityCompat.START);
     }
-
     public void ClickLogo(View view){
         //Fechar o drawer
         closeDrawer(drawerLayout);
     }
-
     public static void closeDrawer(DrawerLayout drawerLayout) {
         //Fechar o drawer
         //Checar condicao
@@ -239,36 +206,30 @@ public class MainActivity extends AppCompatActivity {
             drawerLayout.closeDrawer(GravityCompat.START);
         }
     }
-
     public void ClickHome(View view){
         // Recrear activity
         closeDrawer(drawerLayout);
     }
-
     public void ClickAlimentos(View view){
         // Redirecionar para Alimentos
         redirectActivity(this,Alimentos.class);
         finish();
     }
-
     public void ClickPiramide(View view){
         // Redirecionar para Piramide Alimentar
         redirectActivity(this,Piramide.class);
         finish();
     }
-
     public void ClickPorcoes(View view){
         // Redirecionar para Piramide Alimentar
         redirectActivity(this,Porcoes.class);
         finish();
     }
-
     public void ClickCalculadora(View view){
         // Redirecionar para Calculadora de IMC
         redirectActivity(this,Calculadora.class);
         finish();
     }
-
     public void ClickGadgets(View view){
         // Redirecionar para Gadgets
         redirectActivity(this,Gadgets.class);
@@ -279,13 +240,11 @@ public class MainActivity extends AppCompatActivity {
         redirectActivity(this,Config.class);
         finish();
     }
-
     public void ClickSobreApp(View view){
         // Redirecionar para sobre o app
         redirectActivity(this,SobreApp.class);
         finish();
     }
-
     public void ClickLogout(View view){
         //Sair da conta
         SplashScreen.prefs = getSharedPreferences("prefs", MODE_PRIVATE);
@@ -294,9 +253,7 @@ public class MainActivity extends AppCompatActivity {
         editor.apply();
         redirectActivity(this,Login.class);
         finish();
-
     }
-
     public static void sair(Activity activity) {
         // Iniciar a caixa de alerta
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);
@@ -318,9 +275,7 @@ public class MainActivity extends AppCompatActivity {
         });
         //Exibir mensagem
         builder.show();
-
     }
-
     public static void redirectActivity(Activity activity,Class aClass) {
         //Iniciar intent
         Intent intent = new Intent(activity,aClass);
@@ -333,7 +288,6 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
         sair(this);
     }
-
     @Override
     protected void onPause() {
         super.onPause();
