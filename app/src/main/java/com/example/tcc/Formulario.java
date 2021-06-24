@@ -48,44 +48,46 @@ public class Formulario extends AppCompatActivity {
         altura = alturaCad.getText().toString().trim();
         peso = pesoCad.getText().toString().trim();
         idade = idadeCad.getText().toString().trim();
-        if (nome.equals("") ||
-                email.equals("") ||
-                senha.equals("") ||
-                altura.equals("") ||
-                peso.equals("") ||
-                idade.equals("")) {
-            Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_SHORT).show();
+        if (nome.equals("") || email.equals("") || senha.equals("") || altura.equals("") || peso.equals("") || idade.equals("")) {
+            Toast.makeText(this, "Preencha todos os campos!", Toast.LENGTH_SHORT).show();
         } else {
-            StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, response -> {
-                if (response.contains("1")) {
-                    nomeCad.setText("");
-                    idadeCad.setText("");
-                    alturaCad.setText("");
-                    pesoCad.setText("");
-                    emailCad.setText("");
-                    senhaCad.setText("");
-                    Toast.makeText(Formulario.this, "Cadastro efetuado!", Toast.LENGTH_SHORT).show();
-                    onBackPressed();
-                } else if (response.contains("0")) {
-                    Toast.makeText(Formulario.this, "Cadastro não efetuado! ", Toast.LENGTH_SHORT).show();
-                }
-                //Retornar para a tela de login
-                //onBackPressed();
-            }, error -> Toast.makeText(getApplicationContext(), error.toString().trim(), Toast.LENGTH_SHORT).show()) {
-                @Override
-                protected Map<String, String> getParams() throws AuthFailureError {
-                    Map<String, String> data = new HashMap<>();
-                    data.put("nome", nome);
-                    data.put("email", email);
-                    data.put("senha", senha);
-                    data.put("idade", idade);
-                    data.put("peso", peso);
-                    data.put("altura", altura);
-                    return data;
-                }
-            };
-            RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
-            requestQueue.add(stringRequest);
+            int idadetst = Integer.parseInt(idadeCad.getText().toString());
+            double alturatst = Double.parseDouble(alturaCad.getText().toString());
+            double pesotst = Double.parseDouble(pesoCad.getText().toString());
+            if (idadetst > 150 || alturatst > 3.00 || pesotst > 600){
+                Toast.makeText(this, "Informações inválidas!", Toast.LENGTH_SHORT).show();
+            }else{
+                StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, response -> {
+                    if (response.contains("1")) {
+                        nomeCad.setText("");
+                        idadeCad.setText("");
+                        alturaCad.setText("");
+                        pesoCad.setText("");
+                        emailCad.setText("");
+                        senhaCad.setText("");
+                        Toast.makeText(Formulario.this, "Cadastro efetuado!", Toast.LENGTH_SHORT).show();
+                        onBackPressed();
+                    } else if (response.contains("0")) {
+                        Toast.makeText(Formulario.this, "Cadastro não efetuado! ", Toast.LENGTH_SHORT).show();
+                    }
+                    //Retornar para a tela de login
+                    //onBackPressed();
+                }, error -> Toast.makeText(getApplicationContext(), error.toString().trim(), Toast.LENGTH_SHORT).show()) {
+                    @Override
+                    protected Map<String, String> getParams() throws AuthFailureError {
+                        Map<String, String> data = new HashMap<>();
+                        data.put("nome", nome);
+                        data.put("email", email);
+                        data.put("senha", senha);
+                        data.put("idade", idade);
+                        data.put("peso", peso);
+                        data.put("altura", altura);
+                        return data;
+                    }
+                };
+                RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
+                requestQueue.add(stringRequest);
+            }
         }
     }
     private void mostrarsenha() {

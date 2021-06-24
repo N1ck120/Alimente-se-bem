@@ -33,6 +33,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:text="Login"
+                android:textColor="?attr/colorOnSecondary"
                 android:textSize="20sp" />
 
             <LinearLayout
@@ -103,6 +104,7 @@
                 android:id="@+id/btnLogar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
                 android:layout_margin="20dp"
                 android:text="Logar" />
 
@@ -111,9 +113,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
-                android:textSize="20dp"
                 android:onClick="Cad"
-                android:text="Cadastre-se" />
+                android:text="Cadastre-se"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="20dp" />
 
         </LinearLayout>
     </ScrollView>

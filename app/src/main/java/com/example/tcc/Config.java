@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Switch;
+import android.widget.TextView;
 
 public class Config extends AppCompatActivity {
 
@@ -24,6 +25,12 @@ public class Config extends AppCompatActivity {
         //Estanciar variavel
         drawerLayout = findViewById(R.id.drawer_layout);
         sdark = findViewById(R.id.switch1);
+        MainActivity.nome = findViewById(R.id.nome_toolbar);
+        if (!Login.keep){
+            MainActivity.nome.setText("Olá" + " " + Login.email1);
+        }else{
+            MainActivity.nome.setText("Olá" + " " + Login.email2);
+        }
         dark();
     }
     public void dark(){

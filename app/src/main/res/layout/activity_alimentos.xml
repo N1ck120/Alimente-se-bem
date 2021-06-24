@@ -29,6 +29,7 @@
                 android:contentDescription="TODO" />
 
             <TextView
+                android:id="@+id/nome_toolbar"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -87,7 +88,7 @@
                 android:layout_margin="10dp"
                 android:onClick="reconectar"
                 android:text="Tentar novamente"
-                android:textColor="?attr/colorOnSecondary" />
+                android:textColor="@color/white" />
         </LinearLayout>
 
     </LinearLayout>

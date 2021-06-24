@@ -1,12 +1,5 @@
 <resources>
     <string name="app_name">Alimente-se bem</string>
-    <!-- Preference Titles -->
-
-    <!-- Messages Preferences -->
-
-    <!-- Sync Preferences -->
-
-
     <string name="texto_alface">
     <br><b>1. É aliado de quem quer emagrecer</b></br><br />
 <br>É claro que nenhum alimento sozinho emagrece. Mas o consumo de alface proporciona sensação de saciedade devido as fibras e a água presente no alimento, o que o torna favorável para quem buscar comer menos. Além disso, a alface é um alimento de baixa caloria, mas é importante ficar atento ao tempero utilizado nas saladas, uma vez que os molhos cremosos e gordurosos podem aumentar o consumo de calorias e atrapalhar o processo de emagrecimento (Veja mais ingredientes que atrapalham a salada).</br>
@@ -29,15 +22,12 @@
             cadavez maior por uma alimentação mais saudável.
             Mas quando pensamos comer melhor, logo nos vem à
             cabeça uma dúvida: por onde começar?</string>
-
     <string name="desc_piramide2"> Se é o seu caso, conhecer a pirâmide alimentar
             é uma ótima forma de se orientar. Ela divide os
             alimentos em 8 grupos e indica os que possuem os
             nutrientes essenciais para nos dar energia e
             prevenir doenças. Quer conhecer esses grupos e
             mudar a sua forma de se alimentar?</string>
-
-
     <string name="grupo1">
         É o maior grupo alimentar e compõe a base da pirâmide alimentar.
         É nesse grupo que estão as fontes de carboidratos como aveia, pão, arroz,
@@ -45,22 +35,17 @@
         importantes fontes de energia como carboidratos complexos,
         vitaminas do complexo B e fibras.
     </string>
-
     <string name="grupo2">
         É o grupo das verduras e legumes, fontes de vitaminas, minerais e fibras.
         São essenciais para a regulação de diversas funções metabólicas
         e para funcionamento adequado do organismo.
     </string>
-
-
     <string name="grupo3">
         Assim como as hortaliças, as frutas são fontes de fibras, vitaminas e
         minerais essenciais ao funcionamento do organismo. Elas oferecem os
         antioxidantes (vitaminas A, C e E) que são nutrientes importantes para
         a proteção das células, pois combatem a ação dos radicais livres.
     </string>
-
-
     <string name="grupo4">
 2 xícaras de chá (200 ml) de Leite Desnatado ou 1 xícara de chá de Leite Integral
 2 potinhos de Leite Fermentado
@@ -69,8 +54,6 @@
 4 colheres de sopa de Queijo Cottage
 1 colher de sopa de Requeijão
     </string>
-
-
     <string name="grupo5">
         Este é o principal grupo das fontes de proteínas de origem animal, essencial
         para a formação de tecidos, enzimas e anticorpos. É nele que estão
@@ -78,29 +61,23 @@
         a prevenir as anemias. No entanto, seu consumo deve ser de no máximo
     duas vezes ao dia, pois estes alimentos são ricos em gorduras saturadas e colesterol.
     </string>
-
-
     <string name="grupo6">
         Neste grupo estão os grãos como: feijões, lentilha, grão de bico, soja e oleaginosas.
         Ricos em fibras, contribuem para o bom funcionamento do intestino.
         Para os vegetarianos, esses alimentos são ainda mais indispensáveis,
         já que são excelente fonte de proteína.
     </string>
-
     <string name="grupo7">
         Fonte de energia, os óleos e gorduras são responsáveis pelo transporte
         de vitaminas do complexo B no organismo. Por serem ricos em calorias,
         sua ingestão deve ser moderada e equilibrada. Escolha os alimentos ricos
         em gorduras boas como óleo vegetal, azeite de oliva extravirgem, linhaça,
         castanhas e amêndoas.</string>
-
-
     <string name="grupo8">
         Este grupo é o “patinho feio” da pirâmide. Composto por açúcar,
         mel, doces e produtos açucarados como achocolatados. São pobres
         em nutrientes, não têm fibras, e seu consumo deve ser esporádico.
     </string>
-
     <string name="desc_porcoes">
         A pirâmide alimentar possui quatro níveis com oito grupos de alimentos ao todo,
         divididos de acordo com a sua participação no total calórico de uma dieta saudável.
@@ -188,7 +165,6 @@
 alimentos que ingerimos diariamente. Todo conteúdo disponível
 no aplicativo foi coletado por meio de pesquisas efetuadas via internet,
         rótulos de alimentos, pesquisas cientificas e órgãos governamentais.
-
     </string>
     <string name="texto_introducao2">
         Todo conteúdo disponível no aplicativo são meramente informativos,
@@ -202,7 +178,6 @@ informações básicas como nome, e-mail, senha, idade, peso e altura. Efetuando
 o cadastro o usuário poderá usufruir de todo conteúdo disponível no aplicativo.
 Caso necessite efetuar alterações em seus dados basta seguir os passos informados
 no aplicativo.
-
     </string>
     <string name="texto_introducao4">
         Seus dados não serão repassados a terceiros conforme a
@@ -215,11 +190,9 @@ futuros no aplicativo e/ou desenvolvimento de aplicações com base nos
     Monitoramento cardíaco, atividades físicas, sono, pressão, nível de estresse e ciclo menstrual.
     </string>
     <string name="smartWatch">
-
        Monitora seus batimentos cardíacos e número de passos diários,
         e pode ser utilizado para auxiliar no monitoramento do seu
         desempenho em diversas atividades físicas.
-
     </string>
     <string name="oximetro">
     Monitora a porcentagem de oxigênio no sangue e os batimentos cardíacos.

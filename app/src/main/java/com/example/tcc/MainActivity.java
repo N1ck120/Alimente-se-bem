@@ -30,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
 
     public CardView adm;
     public LinearLayout nt1, conect;
-    public TextView nome;
+    public static TextView nome;
+    public String a = "a";
 
     SliderView sliderView;
     final int[] images = {
@@ -71,7 +72,6 @@ public class MainActivity extends AppCompatActivity {
         }else{
             nome.setText("Olá" + " " + Login.email2);
         }
-
 
         isOnline();
         internet();

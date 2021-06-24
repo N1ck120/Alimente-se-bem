@@ -6,6 +6,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 public class Piramide extends AppCompatActivity {
     //Iniciar variavel
@@ -18,6 +19,12 @@ public class Piramide extends AppCompatActivity {
 
         //Estanciar variavel
         drawerLayout = findViewById(R.id.drawer_layout);
+        MainActivity.nome = findViewById(R.id.nome_toolbar);
+        if (!Login.keep){
+            MainActivity.nome.setText("Olá" + " " + Login.email1);
+        }else{
+            MainActivity.nome.setText("Olá" + " " + Login.email2);
+        }
     }
     public void ClickMenu(View view){
         //Abrir Drawer

@@ -16,12 +16,13 @@ import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Space;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Alimentos extends AppCompatActivity {
     //Iniciar variavel
     DrawerLayout drawerLayout;
-
+    public TextView nome1;
     private WebView wv;
     public ImageView ref;
     public LinearLayout conect2;
@@ -62,6 +63,12 @@ public class Alimentos extends AppCompatActivity {
                     return false;
                 }
             });
+        }
+        MainActivity.nome = findViewById(R.id.nome_toolbar);
+        if (!Login.keep){
+            MainActivity.nome.setText("Olá" + " " + Login.email1);
+        }else{
+            MainActivity.nome.setText("Olá" + " " + Login.email2);
         }
         isOnline();
         internet();

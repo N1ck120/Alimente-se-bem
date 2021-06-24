@@ -85,6 +85,14 @@ public class Login extends AppCompatActivity {
             email1 = eTemail.getText().toString();
             senha1 = eTsenha.getText().toString();
 
+            if (!isOnline()){
+                Context context = getApplicationContext();
+                CharSequence text = "Sem internet!";
+                int duration = Toast.LENGTH_SHORT;
+                Toast toast = Toast.makeText(context, text, duration);
+                toast.show();
+            }
+
             if (kc.isChecked()){
                 SplashScreen.prefs = getSharedPreferences("prefs", MODE_PRIVATE);
                 SharedPreferences.Editor editor = SplashScreen.prefs.edit();

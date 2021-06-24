@@ -109,6 +109,12 @@ public class Calculadora extends AppCompatActivity {
                 toast.show();
             }
         });
+        MainActivity.nome = findViewById(R.id.nome_toolbar);
+        if (!Login.keep){
+            MainActivity.nome.setText("Olá" + " " + Login.email1);
+        }else{
+            MainActivity.nome.setText("Olá" + " " + Login.email2);
+        }
     }
     public void ClickMenu(View view){
         //Abrir Drawer
