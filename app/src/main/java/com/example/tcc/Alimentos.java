@@ -22,11 +22,11 @@ import android.widget.Toast;
 public class Alimentos extends AppCompatActivity {
     //Iniciar variavel
     DrawerLayout drawerLayout;
-    public TextView nome1;
+    private TextView nome1;
     private WebView wv;
-    public ImageView ref;
-    public LinearLayout conect2;
-    public Space r_space;
+    private ImageView ref;
+    private LinearLayout conect2;
+    private Space r_space;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +39,7 @@ public class Alimentos extends AppCompatActivity {
         conect2 = findViewById(R.id.erro);
         wv = findViewById(R.id.lista);
 
-        if(SplashScreen.escolha == 0){
+        if(SplashScreen.getEscolha() == 0){
             WebView myWebView = findViewById(R.id.lista);
             WebSettings webSettings = myWebView.getSettings();
             webSettings.setJavaScriptEnabled(true);
@@ -66,9 +66,9 @@ public class Alimentos extends AppCompatActivity {
         }
         MainActivity.nome = findViewById(R.id.nome_toolbar);
         if (!Login.keep){
-            MainActivity.nome.setText("Olá" + " " + Login.email1);
+            MainActivity.nome.setText("Olá" + " " + Login.getEmail1());
         }else{
-            MainActivity.nome.setText("Olá" + " " + Login.email2);
+            MainActivity.nome.setText("Olá" + " " + Login.getEmail2());
         }
         isOnline();
         internet();
@@ -93,7 +93,7 @@ public class Alimentos extends AppCompatActivity {
     public void reconectar(View view){
         isOnline();
         internet();
-        if(SplashScreen.escolha == 0){
+        if(SplashScreen.getEscolha() == 0){
             WebView myWebView = findViewById(R.id.lista);
             WebSettings webSettings = myWebView.getSettings();
             webSettings.setJavaScriptEnabled(true);
@@ -109,7 +109,7 @@ public class Alimentos extends AppCompatActivity {
 
         isOnline();
         if (isOnline()){
-            if(SplashScreen.escolha == 0){
+            if(SplashScreen.getEscolha() == 0){
                 WebView myWebView = findViewById(R.id.lista);
                 WebSettings webSettings = myWebView.getSettings();
                 webSettings.setJavaScriptEnabled(true);

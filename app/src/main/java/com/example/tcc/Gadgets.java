@@ -21,9 +21,9 @@ public class Gadgets extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawer_layout);
         MainActivity.nome = findViewById(R.id.nome_toolbar);
         if (!Login.keep){
-            MainActivity.nome.setText("Olá" + " " + Login.email1);
+            MainActivity.nome.setText("Olá" + " " + Login.getEmail1());
         }else{
-            MainActivity.nome.setText("Olá" + " " + Login.email2);
+            MainActivity.nome.setText("Olá" + " " + Login.getEmail2());
         }
     }
     public void ClickMenu(View view){

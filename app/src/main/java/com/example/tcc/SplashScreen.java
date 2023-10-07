@@ -12,7 +12,15 @@ public class SplashScreen extends AppCompatActivity {
 
     private static final int timer = 2000;
     public static SharedPreferences prefs;
-    public static int escolha;
+    private static int escolha;
+
+    public static int getEscolha() {
+        return escolha;
+    }
+
+    public static void setEscolha(int escolha) {
+        SplashScreen.escolha = escolha;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

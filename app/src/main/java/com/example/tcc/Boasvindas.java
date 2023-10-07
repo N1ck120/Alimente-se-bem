@@ -38,9 +38,9 @@ public class Boasvindas extends AppCompatActivity {
         editor.putBoolean("firstStart", false);
         editor.apply();
 
-        if (SplashScreen.escolha == 0){
+        if (SplashScreen.getEscolha() == 0){
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-        }else if (SplashScreen.escolha == 1){
+        }else if (SplashScreen.getEscolha() == 1){
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
         }
         MainActivity.redirectActivity(this,Login.class);

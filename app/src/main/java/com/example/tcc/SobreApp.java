@@ -2,13 +2,11 @@ package com.example.tcc;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
 
 public class SobreApp extends AppCompatActivity {
     //Iniciar variavel
@@ -23,9 +21,9 @@ public class SobreApp extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawer_layout);
         MainActivity.nome = findViewById(R.id.nome_toolbar);
         if (!Login.keep){
-            MainActivity.nome.setText("Olá" + " " + Login.email1);
+            MainActivity.nome.setText("Olá" + " " + Login.getEmail1());
         }else{
-            MainActivity.nome.setText("Olá" + " " + Login.email2);
+            MainActivity.nome.setText("Olá" + " " + Login.getEmail2());
         }
     }
     public void Github(View view){

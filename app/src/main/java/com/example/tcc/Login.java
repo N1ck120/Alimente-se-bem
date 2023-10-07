@@ -25,11 +25,19 @@ import java.util.Map;
 public class Login extends AppCompatActivity {
 
     public static boolean keep;
-    public static String email1, senha1, email2, senha2;
+    private static String email1, senha1, email2, senha2;
     private CheckBox kc;
-    public  EditText eTemail, eTsenha;
+    private  EditText eTemail, eTsenha;
     private final String URL = "http://siad.net.br/app/loginUsuarioPHP.php";
     Button btn_login;
+
+    public static String getEmail1() {
+        return email1;
+    }
+
+    public static String getEmail2() {
+        return email2;
+    }
 
     private CheckBox msenha;
 

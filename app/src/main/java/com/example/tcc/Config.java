@@ -27,29 +27,29 @@ public class Config extends AppCompatActivity {
         sdark = findViewById(R.id.switch1);
         MainActivity.nome = findViewById(R.id.nome_toolbar);
         if (!Login.keep){
-            MainActivity.nome.setText("Olá" + " " + Login.email1);
+            MainActivity.nome.setText("Olá" + " " + Login.getEmail1());
         }else{
-            MainActivity.nome.setText("Olá" + " " + Login.email2);
+            MainActivity.nome.setText("Olá" + " " + Login.getEmail2());
         }
         dark();
     }
     public void dark(){
         //Verifica se o tema escuro está ativado
-        if (SplashScreen.escolha == 1){
+        if (SplashScreen.getEscolha() == 1){
             sdark.setChecked(true);
         }
         sdark.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if(sdark.isChecked()){
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-                SplashScreen.escolha = 1;
+                SplashScreen.setEscolha(1);
             }else {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-                SplashScreen.escolha = 0;
+                SplashScreen.setEscolha(0);
             }
             //Salva a opção de tema escolhida
             SplashScreen.prefs = getSharedPreferences("prefs", MODE_PRIVATE);
             SharedPreferences.Editor editor = SplashScreen.prefs.edit();
-            editor.putInt("escolha", SplashScreen.escolha);
+            editor.putInt("escolha", SplashScreen.getEscolha());
             editor.apply();
         });
     }

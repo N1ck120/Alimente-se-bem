@@ -68,9 +68,9 @@ public class MainActivity extends AppCompatActivity {
 
         nome = findViewById(R.id.nome_toolbar);
         if (!Login.keep){
-            nome.setText("Olá" + " " + Login.email1);
+            nome.setText("Olá" + " " + Login.getEmail1());
         }else{
-            nome.setText("Olá" + " " + Login.email2);
+            nome.setText("Olá" + " " + Login.getEmail2());
         }
 
         isOnline();

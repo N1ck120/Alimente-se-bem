@@ -18,7 +18,7 @@ import java.text.DecimalFormat;
 
 public class Calculadora extends AppCompatActivity {
 
-    double v1 = 20, v2 = 25, v3 = 30, v4 = 40, v5 = 43;
+    private double v1 = 20, v2 = 25, v3 = 30, v4 = 40, v5 = 43;
 
     //Iniciar variavel
     DrawerLayout drawerLayout;
@@ -111,9 +111,9 @@ public class Calculadora extends AppCompatActivity {
         });
         MainActivity.nome = findViewById(R.id.nome_toolbar);
         if (!Login.keep){
-            MainActivity.nome.setText("Olá" + " " + Login.email1);
+            MainActivity.nome.setText("Olá" + " " + Login.getEmail1());
         }else{
-            MainActivity.nome.setText("Olá" + " " + Login.email2);
+            MainActivity.nome.setText("Olá" + " " + Login.getEmail2());
         }
     }
     public void ClickMenu(View view){
